@@ -15,7 +15,7 @@ public class Flash : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey (KeyCode.Mouse0))
+        if (Input.GetKey (KeyCode.Space))
         {
             flash1.SetActive(true);
             flash2.SetActive(true);

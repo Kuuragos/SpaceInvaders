@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class Shot : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public Rigidbody misil;
+    public Transform misilPosition;
+    float ratioDisparo = 0.25f;
+    float siguienteDis;
+    float velocidadMisil = 150f;
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKey(KeyCode.Space) && Time.time > siguienteDis)
+        {
+            siguienteDis = Time.time + ratioDisparo;
+            Rigidbody misilInstantiate = Instantiate(misil, misilPosition.position, Quaternion.Euler(new Vector3(-90, 0, 0)));
+            misilInstantiate.velocity = transform.TransformDirection(new Vector3(0, 0, Time.deltaTime * velocidadMisil));
+        }
     }
 }
