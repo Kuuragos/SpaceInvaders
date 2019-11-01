@@ -7,6 +7,7 @@ public class Kamikaze : MonoBehaviour
     public Transform followTo = null;
     public float followSpeed = 5f;
 
+
     void Awake()
     {
         followTo = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();

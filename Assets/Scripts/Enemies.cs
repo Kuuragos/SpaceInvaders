@@ -15,11 +15,6 @@ public class Enemies : MonoBehaviour
         StartCoroutine(Spawn());
     }
 
-    void Update()
-    {
-        
-    }
-
     IEnumerator Spawn()
     {
         while (true)
@@ -40,6 +35,7 @@ public class Enemies : MonoBehaviour
                         alienShipLocation = Random.Range(11, -11);
                         Vector3 asposition = new Vector3(alienShipLocation, 4.74f, -0.11f);
                         GameObject ship = Instantiate(alienShip, asposition, Quaternion.Euler(new Vector3(90, 0, 180)));
+                        ship.AddComponent<AlienShipMove>();
                         break;
 
                 }
