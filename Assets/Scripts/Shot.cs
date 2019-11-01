@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class Shot : MonoBehaviour
 {
-    public Rigidbody misil;
-    public Transform misilPosition;
+    public GameObject misil;
     float ratioDisparo = 0.25f;
     float siguienteDis;
-    float velocidadMisil = 150f;
+    float velocidadMisil = 750;
 
-    void Start()
+    void Awake()
     {
-        
+        transform.tag = "Misil";
     }
 
     void Update()
@@ -20,8 +19,10 @@ public class Shot : MonoBehaviour
         if (Input.GetKey(KeyCode.Space) && Time.time > siguienteDis)
         {
             siguienteDis = Time.time + ratioDisparo;
-            Rigidbody misilInstantiate = Instantiate(misil, misilPosition.position, Quaternion.Euler(new Vector3(-90, 0, 0)));
-            misilInstantiate.velocity = transform.TransformDirection(new Vector3(0, 0, Time.deltaTime * velocidadMisil));
+            GameObject misilInstantiate = Instantiate(misil, transform.position, Quaternion.Euler(new Vector3 (-90,0,0))) as GameObject;
+            Rigidbody rigidbody = misilInstantiate.GetComponent<Rigidbody>();
+            rigidbody.AddForce(Vector3.up * velocidadMisil);
+            Destroy(misilInstantiate, 2f);
         }
     }
 }
