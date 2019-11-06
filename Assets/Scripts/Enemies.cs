@@ -27,13 +27,13 @@ public class Enemies : MonoBehaviour
                 {
                     case 0:
                         kamikazeLocation = Random.Range(11, -11);
-                        Vector3 kposition = new Vector3(kamikazeLocation, 4.74f, -0.11f);
+                        Vector3 kposition = new Vector3(kamikazeLocation, 4.74f, 0);
                         GameObject kamik = Instantiate(kamikaze, kposition, Quaternion.Euler(new Vector3(90, 0, 180)));
                         kamik.AddComponent<Kamikaze>();
                         break;
                     case 1:
                         alienShipLocation = Random.Range(11, -11);
-                        Vector3 asposition = new Vector3(alienShipLocation, 4.74f, -0.11f);
+                        Vector3 asposition = new Vector3(alienShipLocation, 4.74f, 0);
                         GameObject ship = Instantiate(alienShip, asposition, Quaternion.Euler(new Vector3(90, 0, 180)));
                         ship.AddComponent<AlienShipMove>();
                         break;

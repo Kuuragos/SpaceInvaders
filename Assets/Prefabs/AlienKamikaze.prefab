@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 33089405427106636}
   - component: {fileID: 23613917832763796}
   - component: {fileID: 6065528138476365536}
+  - component: {fileID: 8865722230772970383}
   m_Layer: 0
   m_Name: AlienKamikaze
   m_TagString: Untagged
@@ -92,3 +93,17 @@ CapsuleCollider:
   m_Height: 0.1856255
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: -0.06688098}
+--- !u!114 &8865722230772970383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528543826248096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c928c87841a698f4ca86875d826023e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explode: {fileID: 0}
+  playerExplode: {fileID: 0}

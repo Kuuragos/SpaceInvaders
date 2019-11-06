@@ -18,7 +18,6 @@ public class AlienShipMove : MonoBehaviour
         this.target = this.startingPosition + new Vector3(this.horDistance, 0, 0);
     }
 
-    // Update is called once per frame
     void Update()
     {
         Vector3 currentPosition = this.transform.position;

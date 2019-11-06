@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 4243049357039692}
   - component: {fileID: 33275231569138162}
   - component: {fileID: 23134056063201024}
-  - component: {fileID: 64119596843337590}
+  - component: {fileID: 8515861770504383916}
+  - component: {fileID: 3312686935301052085}
   m_Layer: 0
   m_Name: AlienShip
   m_TagString: Untagged
@@ -79,8 +80,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &64119596843337590
-MeshCollider:
+--- !u!65 &8515861770504383916
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -89,10 +90,23 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300000, guid: 5c929a1e7e6053f499c799f0b76fc965, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 7.0721316, y: 4.40429, z: 18.998772}
+  m_Center: {x: 0, y: 0.79953825, z: 1.4622607}
+--- !u!114 &3312686935301052085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960062034117444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c928c87841a698f4ca86875d826023e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explode: {fileID: 0}
+  playerExplode: {fileID: 0}
 --- !u!1 &7803697468503209307
 GameObject:
   m_ObjectHideFlags: 0
@@ -118,7 +132,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7803697468503209307}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 9.19}
+  m_LocalPosition: {x: 0, y: 0, z: 12.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4243049357039692}
